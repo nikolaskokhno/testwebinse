@@ -56,5 +56,22 @@ $(document).ready(function(){
                    }  
               });  
          }  
-    });    
+    });
+    
+    $(document).on('click', '.delete_data', function(){
+        var user_id = $(this).attr("id"); 
+
+        if(confirm("Are you sure do you want delete user data?")){
+            $.ajax({
+                url: 'php/delete.php',
+                method: "POST",
+                data: {user_id:user_id},
+                dataType: "text",
+                success: function(data){
+                    $('#insert_form')[0].reset(); 
+                    $('#webinse_table').html(data);  
+                }
+            });
+        }   
+    });
 });  
