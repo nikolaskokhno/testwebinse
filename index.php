@@ -65,8 +65,8 @@
                     <form method="post" id="insert_form">
                         <div class="form-group">
                             <label>First Name</label>
-                            <input type="text" class="form-control first_name" id="first_name" name="first_name" placeholder="Enter first name">
-                        </div>
+                            <input type="text" class="
+                        </div>form-control first_name" id="first_name" name="first_name" pattern="[a-zA-Z0-9!@#$%^*_|]{0,100}" placeholder="Enter first name">
                 
                         <div class="form-group">
                             <label for="">Second Name</label>
