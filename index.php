@@ -54,7 +54,40 @@
         </div>
     </div>
 
+    <!-- Modal add window -->
 
+    <div id="add_data_Modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content"> 
+                <div class="modal-header">
+                    <h4 class="modal-title">Create new data user</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" id="insert_form">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control first_name" id="first_name" name="first_name" placeholder="Enter first name">
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="">Second Name</label>
+                            <input type="text" class="form-control second_name" id="second_name" name="second_name" placeholder="Enter second name">
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="">Email user</label>
+                            <input type="email" class="form-control email" id="email" name="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group text-right">
+                            <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>                                            
+                    </form>
+                </div>          
+            </div>
+        </div>
+    </div>
 
     <!-- jquery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
