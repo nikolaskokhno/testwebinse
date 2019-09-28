@@ -11,8 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WEBINSE</title>
-    <!-- default style -->
-    <link rel="stylesheet" href="./css/style.css">
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- font awesome cdn -->
@@ -28,7 +26,7 @@
                 <button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal" class="btn btn-warning">Add</button>
             </div>
 
-            <div id="employee_table">
+            <div id="webinse_table">
                 <table class="table table-bordered">
                     <tr>
                         <th width="28%">First Name</th>
@@ -80,6 +78,7 @@
                             <input type="email" class="form-control email" id="email" name="email" placeholder="Enter email">
                         </div>
                         <div class="form-group text-right">
+                            <input type="hidden" name="user_id" id="user_id">
                             <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>                                            
