@@ -39,7 +39,7 @@ if(isset($_POST["operation"]))
      );
      if(!empty($result))
   {
-   echo 'Data Update';
+   echo 'Data Updated';
   }
  }
 

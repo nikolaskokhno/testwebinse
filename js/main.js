@@ -78,10 +78,10 @@ $(document).ready(function(){
                 method:"POST",
                 data:{user_id:user_id},
                 success:function(data)
-            {
-                alert(data);
-                dataTable.ajax.reload();
-            }
+                {
+                    alert(data);
+                    dataTable.ajax.reload();
+                }
                 });
             }
             else
