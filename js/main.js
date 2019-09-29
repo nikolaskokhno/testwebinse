@@ -4,6 +4,30 @@ $(document).ready(function(){
          $('#insert_form')[0].reset();  
     });
 
+    $('#insert_form').on("submit", function(event){  
+        event.preventDefault();  
+        if($('#first_name').val() == "" || $('#second_name').val() == "" || $('#email').val() == "")  
+        {  
+            alert("One of the fields is empty!");  
+        }        
+        else  
+        {  
+             $.ajax({  
+                  url:"php/insert.php",  
+                  method:"POST",  
+                  data:$('#insert_form').serialize(),  
+                  beforeSend:function(){  
+                       $('#insert').val("Inserting");  
+                  },  
+                  success:function(data){  
+                       $('#insert_form')[0].reset();  
+                       $('#add_data_Modal').modal('hide');  
+                       $('#webinse_table').html(data);  
+                  }
+             });  
+        }  
+   });  
+
     $(document).on('click', '.edit_data', function(){  
         var user_id = $(this).attr("id");  
         $.ajax({  
@@ -17,46 +41,11 @@ $(document).ready(function(){
                   $('#email').val(data.email);
                   $('#user_id').val(data.id);  
                   $('#insert').val("Update");  
-                  $('#add_data_Modal').modal('show');  
+                  $('#add_data_Modal').modal('show'); 
              }  
         });  
    }); 
 
-    $('#insert_form').on("submit", function(event){  
-         event.preventDefault();  
-         if($('#name').val() == "")  
-         {  
-              alert("Name is required");  
-         }  
-         else if($('#address').val() == '')  
-         {  
-              alert("Address is required");  
-         }  
-         else if($('#designation').val() == '')  
-         {  
-              alert("Designation is required");  
-         }  
-         else if($('#age').val() == '')  
-         {  
-              alert("Age is required");  
-         }  
-         else  
-         {  
-              $.ajax({  
-                   url:"php/insert.php",  
-                   method:"POST",  
-                   data:$('#insert_form').serialize(),  
-                   beforeSend:function(){  
-                        $('#insert').val("Inserting");  
-                   },  
-                   success:function(data){  
-                        $('#insert_form')[0].reset();  
-                        $('#add_data_Modal').modal('hide');  
-                        $('#webinse_table').html(data);  
-                   }  
-              });  
-         }  
-    });
     
     $(document).on('click', '.delete_data', function(){
         var user_id = $(this).attr("id"); 
