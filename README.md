@@ -1,3 +1,9 @@
+-- Create database -- 
+
+CREATE DATABASE [IF NOT EXISTS] webinse;
+
+---------------------------------------------
+
 -- Table structure for table `tbl_webinse` --
 
  CREATE TABLE IF NOT EXISTS `tbl_webinse` (  
